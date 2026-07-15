@@ -4,7 +4,7 @@ import { Env } from '@/lib/env/env.types';
     const url = new URL(request.url);
     const key = url.searchParams.get('key');
 
-    if (key !== 'your_secret_key_here') {
+    if (key !== 'Koishi1337') {
       return new Response('Unauthorized', { status: 401 });
     }
 
