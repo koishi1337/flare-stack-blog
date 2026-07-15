@@ -28,5 +28,8 @@ export function handleRootRequest(
   env: Env,
   ctx: ExecutionContext,
 ) {
+ if (url.pathname === '/api/users') {
+    return handleUsersRequest(request, env);
+  }
   return getOAuthProvider().fetch(request, env, ctx);
 }
